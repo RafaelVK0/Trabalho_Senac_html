@@ -9,46 +9,30 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <title> Lista de Tarefas</title>
 
-    <style>
-       
-       body {
-      background-color: white;
-      padding: 20px;
-    }
 
     </style>
 
   </head>
   <body>
-    
 
-    <div class="conteiner mt-4">
-    <h1>Lista de Tarefas</h1>
-    <br>
-
+    <div class="container mt-4">
+       <h1 class="titulo">Lista de Tarefas</h1>
 
     <form id="formTarefa">
-        <fieldset>
-            <div class="mb-3">
-                <label for="Tarefa"></label>
-                <input type="text" id="tarafa" clas="form-control" placeholder="Insira uma nova tarefa">
-            </div>
-
-            <div>
-                <button type="submit" class="btn btn-primary"></button>Adicionar</button>
-            </div>
-        </fieldset>
-
+        
+        <input type="text" id="tarefa" class="form-control" placeholder="Insira uma nova tarefa">
+        <button type="submit">Adicionar </button>
+        
         <div>
-            <label for="filtrar"></label>
-            <select name="filtrar" id="filtrar"></select>
-            <option selected value="Todos"></option>
-            <option value="Concluídas"></option>
-            <option value="Pendentes"></option>
+            <select name="filtrar" id="filtrar">
+                <option value="Todos">Todos</option>
+                <option value="Concluídas">Concluídas</option>
+                <option value="Pendentes">Pendentes</option>
+            </select>
         </div>
     </form>
 
-    <ul id="listaTarefas" class="mt-4 list-group"></ul>
+    <ul id="listaTarefas" class="list-group"></ul>
     
     <script>
         let form = document.getElementById('formTarefa');
